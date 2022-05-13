@@ -6,7 +6,6 @@ categories.forEach(category => {
     console.log('Elements:', category.lastElementChild.children.length);
 });
 
-
 // const array = [...categories];
 // array.map(category => {
 //     console.log('Category:', category.firstElementChild.textContent);

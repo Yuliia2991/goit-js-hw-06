@@ -3,7 +3,6 @@
 //Добавь слушатели кликов на кнопки, внутри которых увеличивай или уменьшай значение счтетчика.
 //Обновляй интерфейс новым значением переменной counterValue.
 
-
 let counterValue = 0;
 const counterValueEl = document.querySelector('#value');
 const decrementBtnEl = document.querySelector('[data-action="decrement"]');
