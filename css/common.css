@@ -23,13 +23,11 @@ button {
   cursor: pointer;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
 .gallery {
   display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 .gallery-item:not(:last-child) {
   margin-right: 30px;
