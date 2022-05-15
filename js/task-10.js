@@ -6,6 +6,7 @@
 //Все элементы должены иметь случайный цвет фона в формате HEX. Используй готовую функцию getRandomHexColor для получения цвета.
 //Создай функцию destroyBoxes(), которая очищает содержимое div#boxes, тем самым удаляя все созданные элементы.
 
+
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
@@ -17,18 +18,11 @@ const refs = {
   boxes: document.querySelector('#boxes'),
 }
 
-refs.input.addEventListener('input', getInputValue);
-
-function getInputValue() {
-  const inputValue = refs.input.value;
-  return Number(inputValue);
-}
-
-refs.createBtn.addEventListener('click', () => createBoxes(getInputValue()));
+refs.createBtn.addEventListener('click', createBoxes);
 
 function createBoxes(amount) {
+  amount = Number(refs.input.value);
   const divsArray = [];
-    
   for (let i = 0; i < amount; i += 1) {
     let div = document.createElement('div');
     const sizes = `${30 + 10 * i}px`;
@@ -46,3 +40,4 @@ function destroyBoxes() {
   const deleteBoxes = document.querySelectorAll('#boxes > div');
   deleteBoxes.forEach(box => box.remove());
 }
+
